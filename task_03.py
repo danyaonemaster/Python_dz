@@ -2,9 +2,9 @@ import re
 
 
 def run():
-    text = """Hello Python! Hello User! How are you Python? I’m good, and you? Thank you, I’m ""\n"
-            "good, too. Can you help me with task? Yes, sure. It’s my task (show the code). I want to ask ""\n"
-            "ChatGPT."""
+    text = """Hello Python! Hello User! How are you Python? I’m good, and you? Thank you, I’m
+            good, too. Can you help me with task? Yes, sure. It’s my task (show the code). I want to ask
+            ChatGPT."""
 
     text_list = re.split("[!?.]", text)
     text_space_list = [i for i in text if i == " "]
@@ -12,10 +12,9 @@ def run():
     text_without_spaces_02 = "".join(text.split(" "))
 
     text_a_list = [i for i in text.lower() if i == "a"]
+    enter = "\n"
 
-    enter = "\n\n"
-
-    print(f"\nlen proposals list : {len(text_list[:-1])}{enter}"
+    print(f"\n\n\nlen proposals list : {len(text_list[:-1])}{enter}"
           f"len spase list : {len(text_space_list)}{enter}"
           f"len a list : {len(text_a_list)}{enter}"
           f"lower case list : {text.lower()}{enter}"
@@ -25,6 +24,6 @@ def run():
           .replace("ChatGPT", "Python")}{enter}"
           f"every fifth character in text : {text[::5]}{enter}")
 
+    print(f"len text is {"even" if len(text) % 2 == 0 else "odd"}")
 
-    print(f"len text is {"even" if len(text) % 2 == 0 else "odd"}{enter}")
     print(f"text in reverse order : {text[::-1]}{enter}")
