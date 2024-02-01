@@ -5,5 +5,3 @@ def run():
             result = i * j
             print(f"{result}", end=" ")
 
-
-run()
