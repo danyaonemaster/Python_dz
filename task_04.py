@@ -2,6 +2,7 @@ import re
 
 
 def run():
+    print("\n","Tast_01","\n")
     text = "Our phone number + 38 (067) 125 67 92 and we are open from 9:00 to 18:00."
     text_list = re.split("[,: ().]", text)
 
